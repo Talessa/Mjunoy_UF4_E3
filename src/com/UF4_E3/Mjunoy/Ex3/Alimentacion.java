@@ -1,6 +1,7 @@
 package com.UF4_E3.Mjunoy.Ex3;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Alimentacion extends Producto {
 
@@ -15,8 +16,11 @@ public class Alimentacion extends Producto {
     }
 
     public void setPrecio(float precio) {
+         LocalDate hoy = LocalDate.now();
+         Period diferencia = Period.between(fechaCaducidad,hoy);
+         int dif = diferencia.getDays();
 
-        this.precio = precio;
+        this.precio = precio - (float) (precio*(1/(dif+1)) + (precio*(0.1)));;
     }
 
 

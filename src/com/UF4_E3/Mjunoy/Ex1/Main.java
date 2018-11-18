@@ -22,7 +22,7 @@ public class Main {
             d1 = (int) (Math.random()*6) + 1;
             System.out.print(d1);
             d2 = (int) (Math.random()*6) + 1;
-            System.out.println(" + "+d2+" = "+(d1+d2));
+            System.out.println(d1+" + "+d2+" = "+(d1+d2));
             if(frequencia.containsKey(d1+d2)){
                 frequencia.put(d1+d2,frequencia.get(d1+d2)+1);
             }
